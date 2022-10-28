@@ -1,14 +1,16 @@
 
-   <div fxFlex>
-    <mat-grid-list cols="2" rowHeight="400px">
+  <div fxLayout="column">
+    <mat-grid-list cols="2" rowHeight="600px">
         <mat-grid-tile>
         <mat-list>
-          <mat-list-item class="flex">
-            <h3>{{dish.name | uppercase}}</h3>
-            <img height="400px" src={{dish.image}} alt={{dish.name}}>
-            <p>{{dish.description}}</p> 
-            <button mat-button>LIKE</button>
-            <button mat-button>SHARE</button>  
+          <mat-list-item >
+            <div class="flex">
+              <h3>{{dish.name | uppercase}}</h3>
+              <img height="400px" src={{dish.image}} alt={{dish.name}}>
+              <p>{{dish.description}}</p> 
+              <button mat-button>LIKE</button>
+              <button mat-button>SHARE</button>  
+            </div>
           </mat-list-item>
         </mat-list>
         </mat-grid-tile> 
@@ -18,16 +20,41 @@
             <mat-list-item>
               <h3>Comments</h3>
             </mat-list-item>
-            <mat-list-item class="flex" *ngFor="let comment of dish.comments" class="flex"> 
-              <p>{{comment.comment}}</p> <br>
-              <p>{{comment.rating}} stars</p>
-              <p>-- {{comment.author}}</p>
-              <p>{{comment.date | date}}</p>
+           
+            <mat-list-item *ngFor="let comment of dish.comments"  > 
+              <div class="flex">
+                <p>{{comment.comment}}</p>
+                <p>{{comment.rating}} stars</p>
+                <p>-- {{comment.author}}</p>
+                <p>{{comment.date | date}}</p>
+              </div>    
             </mat-list-item>
            </mat-list>
         </mat-grid-tile>
       </mat-grid-list>
 </div>
+
+  
+<!-- <div fxLayout="column">
+  <div fxFlex="30" class="grid">
+<p>item 1</p>
+<p>item 2</p>
+</div>
+  </div>
+  
+    -->
+    <!-- <mat-grid-list cols="2" rowHeight="400px">
+      <mat-grid-tile>
+        <p>item 1</p>
+      </mat-grid-tile>
+      <mat-grid-tile>
+        <p>Item 2</p>
+
+      </mat-grid-tile>
+
+    </mat-grid-list>   --> 
+
+
 
 
 
