@@ -14,6 +14,7 @@ import 'hammerjs';
 import { MatGridListModule } from '@angular/material/grid-list';
 import { MatCardModule } from '@angular/material/card';
 import { MatButtonModule } from '@angular/material/button';
+import { MatListModule } from '@angular/material/list';
 
 
 @NgModule({
@@ -29,7 +30,8 @@ import { MatButtonModule } from '@angular/material/button';
     FlexLayoutModule,
     MatGridListModule,
     MatCardModule,
-    MatButtonModule
+    MatButtonModule,
+    MatListModule
   ],
   providers: [],
   bootstrap: [AppComponent]

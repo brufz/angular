@@ -1,24 +1,33 @@
-    <div fxFlex>
-      <mat-grid-list cols="2" rowHeight="400px">
-        <mat-grid-tile  class="flex">
-          <mat-grid-tile-header>
-            <h1> {{dish.name | uppercase}} </h1>  
-          </mat-grid-tile-header>
-          <img height="400px" src={{dish.image}} alt={{dish.name}}>
-          <p>{{dish.description}}</p> 
-          <mat-grid-tile-footer>
-            
-            <button mat-button>LIKE</button>
-            <button mat-button>SHARE</button>        
-          </mat-grid-tile-footer>
-        </mat-grid-tile>
+
+   <div fxFlex>
+    <mat-grid-list cols="2" rowHeight="400px">
         <mat-grid-tile>
-          <p>comments</p>
+        <mat-list>
+          <mat-list-item class="flex">
+            <h3>{{dish.name | uppercase}}</h3>
+            <img height="400px" src={{dish.image}} alt={{dish.name}}>
+            <p>{{dish.description}}</p> 
+            <button mat-button>LIKE</button>
+            <button mat-button>SHARE</button>  
+          </mat-list-item>
+        </mat-list>
+        </mat-grid-tile> 
+      
+        <mat-grid-tile>
+          <mat-list>
+            <mat-list-item>
+              <h3>Comments</h3>
+            </mat-list-item>
+            <mat-list-item class="flex" *ngFor="let comment of dish.comments" class="flex"> 
+              <p>{{comment.comment}}</p> <br>
+              <p>{{comment.rating}} stars</p>
+              <p>-- {{comment.author}}</p>
+              <p>{{comment.date | date}}</p>
+            </mat-list-item>
+           </mat-list>
         </mat-grid-tile>
-
       </mat-grid-list>
-    </div>
-
+</div>
 
 
 
