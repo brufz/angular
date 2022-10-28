@@ -1,5 +1,5 @@
 
-  <div fxLayout="column">
+  <div>
     <mat-grid-list cols="2" rowHeight="600px">
         <mat-grid-tile>
         <mat-list>
@@ -17,42 +17,22 @@
       
         <mat-grid-tile>
           <mat-list>
+            
             <mat-list-item>
               <h3>Comments</h3>
             </mat-list-item>
            
-            <mat-list-item *ngFor="let comment of dish.comments"  > 
-              <div class="flex">
-                <p>{{comment.comment}}</p>
-                <p>{{comment.rating}} stars</p>
-                <p>-- {{comment.author}}</p>
-                <p>{{comment.date | date}}</p>
-              </div>    
-            </mat-list-item>
+            <mat-list-item *ngFor="let comment of dish.comments" > 
+                <p matLine>{{comment.comment}}</p>
+                <p matLine>{{comment.rating}} stars</p>
+                <p matLine>-- {{comment.author}}</p>
+                <p matLine>{{comment.date | date}}</p>
+              </mat-list-item>  
            </mat-list>
         </mat-grid-tile>
       </mat-grid-list>
 </div>
 
-  
-<!-- <div fxLayout="column">
-  <div fxFlex="30" class="grid">
-<p>item 1</p>
-<p>item 2</p>
-</div>
-  </div>
-  
-    -->
-    <!-- <mat-grid-list cols="2" rowHeight="400px">
-      <mat-grid-tile>
-        <p>item 1</p>
-      </mat-grid-tile>
-      <mat-grid-tile>
-        <p>Item 2</p>
-
-      </mat-grid-tile>
-
-    </mat-grid-list>   --> 
 
 
 
