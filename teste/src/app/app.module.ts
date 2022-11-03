@@ -6,6 +6,10 @@ import { DishdetailsComponent } from './dishdetails/dishdetails.component';
 import { MenuComponent } from './menu/menu.component';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
+import { AboutComponent } from './about/about.component';
+import { HomeComponent } from './home/home.component';
+import { ContactComponent } from './contact/contact.component';
+
 import { DishService } from './services/dish.service';
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -19,6 +23,8 @@ import { MatCardModule } from '@angular/material/card';
 import { MatButtonModule } from '@angular/material/button';
 import { MatListModule } from '@angular/material/list';
 
+import { AppRoutingModule } from './app-routing/app-routing.module';
+
 
 @NgModule({
   declarations: [
@@ -26,7 +32,10 @@ import { MatListModule } from '@angular/material/list';
     MenuComponent,
     DishdetailsComponent,
     HeaderComponent,
-    FooterComponent
+    FooterComponent,
+    AboutComponent,
+    HomeComponent,
+    ContactComponent
   ],
   imports: [
     BrowserModule,
@@ -36,7 +45,8 @@ import { MatListModule } from '@angular/material/list';
     MatGridListModule,
     MatCardModule,
     MatButtonModule,
-    MatListModule
+    MatListModule,
+    AppRoutingModule
   ],
   providers: [
     DishService
