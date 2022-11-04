@@ -8,6 +8,19 @@ body {
 }
 
 .container {
-  margin: 20px;
+  padding: 20px;
   display:flex;
+}
+
+.flex-starter{
+  flex: 1 1 auto;
+}
+
+.nav-color{
+  background-color: rgb(11, 92, 11);
+  color: white;
+}
+
+.footer-color{
+  background-color: rgba(36, 136, 36, 0.703);
 }
