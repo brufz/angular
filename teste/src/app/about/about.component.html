@@ -53,7 +53,7 @@
     </mat-card>
   </div>
 
-  <div fxFlex>  
+  <div fxFlex *ngIf="leaders">  
     <div class="container"
     fxLayout="column"
     fxLayoutGap="10px">
@@ -67,5 +67,8 @@
       </mat-list-item>
     </mat-list>
     </div>
+  </div>
+  <div [hidden]="leaders">
+    <mat-spinner></mat-spinner><h4>Loading... Please, wait!</h4>
   </div>
 </div>
