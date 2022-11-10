@@ -6,7 +6,7 @@
    <p>
     <mat-form-field class="form-style"> 
       <input matInput type="text" formControlName="author" placeholder="Name" required>
-      <!-- <mat-error></mat-error> -->
+       <mat-error *ngIf="formErrors.author">{{formErrors.author}}</mat-error>
     </mat-form-field>
    </p> 
    <p>
@@ -14,10 +14,10 @@
    </p>
     <p>
       <mat-form-field class="form-style">
-        <textarea matInput formControlName="comment" placeholder="Your Comment" rows="12"></textarea>
-        <!-- <mat-error></mat-error> -->
+        <textarea matInput formControlName="comment" placeholder="Your Comment" rows="12" required></textarea>
+        <mat-error *ngIf="formErrors.comment">{{formErrors.comment}}</mat-error>
       </mat-form-field>
     </p>
-    <button mat-button type="submit" style="background-color: #512DA8;">Submit</button>
+    <button mat-button [disabled]="!fform.valid" type="submit" style="background-color: #512DA8;" >Submit</button>
   </form>
   </div>
