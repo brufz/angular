@@ -3,3 +3,11 @@
     flex-direction: column;
 }
 
+.form-style{
+    border: black solid 1px;
+    width: 500px!important;
+}
+
+mat-slider {
+    width: 300px;
+  }
