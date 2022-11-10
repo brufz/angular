@@ -59,8 +59,6 @@ export class ContactComponent implements OnInit {
       contactType: 'None',
       message: ''
 
-      
-
     });
 
     this.feedbackForm.valueChanges
