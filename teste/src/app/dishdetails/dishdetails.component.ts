@@ -86,12 +86,18 @@ export class DishdetailsComponent implements OnInit {
       'date' : new Date()
     })
 
+ 
+
     this.userForm.valueChanges
       .subscribe(data => this.onValueChanged(data));
 
       this.onValueChanged(); // (re)set validation messages now
   }
-         
+  
+  getAuthor(){
+    document.getElementById('author').innerHTML;
+  }
+
   onValueChanged(data?: any){
     if(!this.userForm){ return ;}
     const form = this.userForm;
@@ -105,12 +111,9 @@ export class DishdetailsComponent implements OnInit {
             if(control.errors.hasOwnProperty(key)){
               this.formErrors[field] += messages[key] + ' ';
             }
-
-
           }
         }
       }
     }
   }
-
 }
